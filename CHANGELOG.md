@@ -1,5 +1,23 @@
 # superfill.ai
 
+## 0.2.8
+
+### Patch Changes
+
+- fix: sync fixes
+
+## 0.2.7
+
+### Patch Changes
+
+- chore: packages versions upgrade
+
+## 0.2.6
+
+### Patch Changes
+
+- feat: subscription service added
+
 ## 0.2.5
 
 ### Patch Changes

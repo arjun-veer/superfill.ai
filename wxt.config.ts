@@ -24,7 +24,7 @@ export default defineConfig({
 
     const baseManifest = {
       name: APP_NAME,
-      version: "0.2.5",
+      version: "0.2.8",
       description: "AI-powered form filling browser extension",
       permissions: ["activeTab", "storage", "offscreen", "contextMenus"],
       host_permissions: [
@@ -33,6 +33,9 @@ export default defineConfig({
         "https://api.groq.com/*",
         "https://api.deepseek.com/*",
         "https://generativelanguage.googleapis.com/*",
+        "https://superfill.ai/*",
+        "https://*.superfill.ai/*",
+        ...(isDev ? ["http://localhost:3002/*"] : []),
       ],
       icons: {
         16: "/icon-16.png",
@@ -44,6 +47,7 @@ export default defineConfig({
       },
       browser_specific_settings: {
         gecko: {
+          id: "{dad58e95-9172-4abe-b006-2db179811a47}",
           data_collection_permissions: {
             required: ["none"],
           },
